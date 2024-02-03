@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/961c8bda21.js" crossorigin="anonymous"></script>
+    <title>Cook Book</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">Allrecipes</div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="recipee.html">Recipes</a></li>
+                <li><a href="category.html">Categories</a></li>
+                <li><a href="addrecipee.html">ADD RECIPES</a></li>
+            </ul>
+        </div>
+    </header>
+<main>
+        <div class="container">
+            <section id="recipe-list">
+                <!-- Display recipes here -->
+            </section>
+
+            <section id="recipe-form">
+                <h2>Add/Edit Recipe</h2>
+                <form id="recipe-form">
+                    <div>
+                        <div>
+                    <label for="recipe-name">Recipe Name:</label><br>
+                    <input class="input" type="text" id="recipe-name" required placeholder="Write here....."></div>
+
+                    <div><label for="ingredients">Ingredients:</label><br>
+                    <textarea class="input" id="ingredients" rows="4" cols="40" required placeholder="Write here....."></textarea></div>
+
+                    <div><label for="instructions">Instructions:</label><br>
+                    <textarea class="input" id="instructions" rows="4" cols="40" required
+                        placeholder="Write here....."></textarea></div>
+                    </div>
+
+                    <button type="button" onclick="saveRecipe()" class="svrecipee">Save Recipe</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

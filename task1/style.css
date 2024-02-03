@@ -1,0 +1,388 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;        
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    background: #abc4b5;
+}
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./assest/newone.jpg);
+    background-size: cover;
+}
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: #213032;
+    margin-right: 40px;
+}
+.nav-bar ul{
+    display: flex;
+    list-style: none;
+}
+.nav-bar ul li a{
+    display: block;
+    color: #edffed;
+    font-size: 20px;
+    padding:8px 25px;
+    transition: .2s;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.nav-bar ul li:hover a{
+    background-color: #97a2a3;
+    color: #213032;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.content{
+    position: absolute;
+    top: 40%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+h1{
+    color: white;
+    font-size: 75px;
+    margin: 20px 0px 20px;
+}
+h3{
+    color: lightgreen;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+h4{
+    color: red;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.button{
+    position: absolute;
+    background-color: #213032;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid black;
+    font-weight: bold;
+    padding: 13px 30px;
+    transform: .4s;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: #97a2a3;
+    color:#213032;
+    border: 2px solid black;
+    cursor: pointer;
+}
+/* about us section */
+.about{  
+    background-color: #354e52;
+    padding: 20px;
+}
+.container1{
+    display: flex;
+}
+.desc1{
+    padding:20px 0;
+    font-size: 75px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.desc2{
+    width: 400px;
+    position: relative;
+    margin-top: 50px;
+    left :30%;
+    font-size: 20px;
+    color:#97a2a3;
+    letter-spacing: 2px;
+    line-height: 35px;
+}
+.container1 img{
+    width: 400px;
+    top: 50px;
+    transform: translateX(40%);
+    border-radius: 5px;
+
+}
+/* recipes section */
+.recipe{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #213032;
+}
+.recipe h2{
+    color: #edffef;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.box .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.box .card .content{
+    position: absolute;
+    padding: 15px;
+    color: #182f32;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    background-color: #edffed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.box .card:hover .content{
+ opacity: 1;
+}
+
+.card h3{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #213032;
+}
+.card p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.card button{
+    position: relative;
+    background-color: #213032;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid black;
+    font-weight: bold;
+    transform: 0.4s;
+    padding: 13px 30px;
+}
+.card button:hover{
+    background-color: #97a2a3;
+    color: #213032;
+    
+}
+/* categories */
+.categories{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #354e52;
+}
+.categories h2{
+    color: #edffef;
+    font-size: 75px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.categories .ca-card{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 5px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+
+}
+
+.categories .ca-card .content{
+    position: absolute;
+    padding: 15px;
+    color: #182f32;
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    background-color: #edffed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.categories .ca-card:hover .content{
+    opacity: 1;
+}
+.ca-card h3{
+    color: #213032;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.ca-card p{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.ca-card button{
+    position: relative;
+    border-radius: 5px;
+    background-color: #213032;
+    color: #fff;
+    padding: 13px 30px;
+    border: 2px solid black;
+    transform: .4s;
+    text-decoration: none;
+}
+.ca-card button:hover{
+    background-color: #97a2a3;
+    color: #213032;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.categories .ca-card img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+/* contact us */
+.contact{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background: #182f32;
+    padding-top: 100px;
+}
+.contact-info,.contact-form{
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+    text-align: center;
+    color: #edffed;
+    font-size: 25px;
+}
+.contact-info h2, .contact-form h2{
+    font-size: 24px;
+    color: #edffed;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.contact-form form{
+    text-align: center;
+}
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    
+}
+.contact-form button{
+    background-color: #213032;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid black;
+    transform: .4s;
+    padding: 10px 0px;
+    text-decoration: none;
+}
+.contact-form button:hover{
+    background-color: #97a2a3;
+    color: #213032;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.contact-form label{
+    text-align: left;
+    color: #edffef;
+}
+.contact-form input,
+.contact-form textarea{
+padding: 8px;
+}
+.contact-info p{
+    padding: 20px;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.social-icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    color: #97a2a3;
+    text-align: center;
+    line-height: 40px;
+    font-size: 38px;
+}
+.social-icon:hover{
+    color: #314e52;
+    cursor: pointer;
+}
+footer{
+    padding: 20px 0px;
+    background: #182f32;
+}
+footer h5{
+    font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+    color: #97a2a3;
+}
+main {
+    
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    align-items: center;
+}
+.container{
+    width: 700px;
+    margin: auto;
+    padding: 30px;
+    
+}
+.svrecipee{
+    background-color: #04AA6D; /* Green */
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 12px;
+}
+}
