@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Issue Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Tracker</title>
+    <link rel="stylesheet" href="opnto.css">
+    
+    
+</head>
+
+<body>
+    <header>
+        <h1>Issue Tracker</h1>
+        <button id="loginBtn" onclick="login()">Log In</button>
+        <button id="logoutBtn" onclick="logout()" style="display:none;">Log Out</button>
+    </header>
+    <main id="app" style="display:none;">
+        <div class="container">
+        <h3 class="heading">Add Issue</h3>
+        <div class="jumbotron">
+           
+            <form id="issueInputForm">
+                <div class="form-group">
+                    <label for="issueDescription">Description</label>
+                    <textarea class="form-control" id="issueDescription" placeholder="Describe the issue ..." rows="4"
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="issueSeverity">Priority</label>
+                    <select id="issueSeverity" class="form-control" required>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="issueAssignedTo">Assigned To</label>
+                    <select id="issueAssignedTo" class="form-control" required>
+                        <option value="Admin">Admin</option>
+                        <option value="Developer">Developer</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="issueAttachment">Attachment (ZIP file)</label>
+                    <input type="file" class="form-control" id="issueAttachment" accept=".zip" required>
+                </div>
+                <div class="center-button">
+                    <button type="button" class="btn btn-primary" onclick="submitIssue()">Add</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-12">
+            <div id="issuesList" class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Issue ID</th>
+                            <th>Status</th>
+                            <th>Description</th>
+                            <th>Priority</th>
+                            <th>Handler</th>
+                            <th>File</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal for updating an issue -->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Update Issue</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateForm">
+                        <div class="form-group">
+                            <label for="updateDescription">New Description</label>
+                            <textarea class="form-control" id="updateDescription"
+                                placeholder="Enter the updated description ..." rows="4"></textarea>
+                        </div>
+                        <input type="hidden" id="updateId">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="updateIssue()">Update</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+
+        <!--<a href="index.html">login</main>-->
+    <!--<main id="app" style="display:none;">
+        <div id="issue-form">
+            <h2>Create Issue</h2>
+            <form id="create-issue-form">
+                <label for="title">Title:</label>
+                <input type="text" id="title" required>
+
+                <label for="description">Description:</label>
+                <textarea id="description" required></textarea>
+
+                <label for="priority">Priority:</label>
+                <select id="priority" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <label for="assignee">Assignee:</label>
+                <input type="text" id="assignee" required>
+
+                <label for="attachment">Attachment:</label>
+                <input type="file" id="attachment">
+
+                <button type="button" onclick="createIssue()">Create Issue</button>
+            </form>
+        </div>
+
+        <div id="issue-list">
+            
+        </div>
+    </main>-->
+    <script src="abt.js"></script>
+    
+</body>
+
+</html>
