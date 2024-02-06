@@ -1,0 +1,213 @@
+body {
+    background-color: #ECF4FD;
+       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      overflow-x: hidden;
+      color: black;
+    }
+    .yes{
+      display: none;
+    }
+     nav ul{
+      height: 50px;
+      margin: 0em 0em;
+      background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #848ab9 100%); /* Light Blue Background */
+      box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+      display: flex;
+      align-items: center;
+      justify-content: right;
+    }
+    
+    li a{
+      text-decoration: none;
+    }
+    li{
+      list-style: none;
+      padding: 0em 2em;
+    }
+    a{
+      font-family: 'Amatic SC', sans-serif;
+      font-family: 'Archivo Black', sans-serif;
+      font-family: 'Bahianita', sans-serif;
+      font-family: 'Cinzel', serif;
+      color: darkblue; /* Dark Blue Text Color */
+      font-size: 20px;
+    }
+    .a{
+      font-family: 'Amatic SC', sans-serif;
+  font-family: 'Archivo Black', sans-serif;
+  font-family: 'Bahianita', sans-serif;
+  font-family: 'Bungee Spice', sans-serif;
+  font-family: 'Cinzel', serif;
+  font-family: 'Rubik Doodle Shadow', system-ui;
+  font-family: 'Rubik Glitch', system-ui;
+    }
+  li:first-child{
+    
+  margin-right: auto;
+  }
+  
+  .side{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: lightblue; /* Light Blue Background */
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .side li{
+    padding: 1em 0em;
+    width: 100%;
+  }
+  .side a{
+  width: 100%;
+  }
+  .me{
+    font-size: 20px;
+    margin: 2em 0em;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+
+  }
+  .rede{
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 2em 3em;
+    /*background: linear-gradient(0deg, #A47CF3, #683FEA); */
+    background-color: green;
+    border-radius: 25px;
+}
+  .red{
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 2em 3em;
+    /*background: linear-gradient(0deg, #A47CF3, #683FEA); */
+    background-color: lightblue;
+    border-radius: 25px;
+}
+  .rd{
+    font-family: 'Bebas Neue', sans-serif;
+    padding: 2em 3em;
+    background: linear-gradient(135deg, #7b4397, #dc2430); /* Gradient with Purple and Red */
+    border-radius: 25px;
+    }
+  
+    .ed{
+      font-family: 'Bebas Neue', sans-serif;
+      padding: 2em 3em;
+      background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%); /* Gradient with Green */
+      border-radius: 25px;
+    }
+  
+      .re{
+        font-family: 'Bebas Neue', sans-serif;
+        padding: 2em 3em;
+        background: var(--gradient-2, linear-gradient(90deg, #2AF598 0%, #009EFD 100%));
+        border-radius: 25px;
+  
+        }
+  
+   .why{
+    font-size: 30px;
+   }     
+  h5{
+    margin: -1em 0em;
+  }
+   .container{
+    display: flex;
+  justify-content: center;
+  gap: 90px;
+   }   
+   .write{
+    border:1px solid #f49131;
+    border-radius:1rem;
+    background: #F5F5F5;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0);
+    color: #333333; /* Dark Blue Text Color */
+
+   
+   }  
+   
+  
+   .contain{
+    margin: 3em 0em;
+    display: flex;
+    justify-content: center;
+    gap: 90px;
+   }
+  
+  table{
+    align-items: center;
+    color: #333333;
+    font-size: 30px;
+    font-family: 'Archivo Black', sans-serif;
+  }
+  td{
+   
+    padding: 0.5em 0em;
+  }
+  .need{
+    border:1px solid #f49131;
+    border-radius:1rem;
+    background: #F2EDEC;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0);
+   
+  }
+  .center{
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: rgb(117, 117, 191);
+  }
+   @media (max-width: 600px) {
+    .no{
+      display: none;
+    }
+    .yes{
+      display: block;
+    }
+    .me{
+      text-align: center;
+      flex-direction: column;
+      padding: 0em 3em;
+    }
+  .container{
+      flex-direction: column;
+      width: 98%;
+    }
+    table{
+      margin: 0em 1em;
+      font-size: 23px;
+    }
+    .need{
+      width: 90%;
+    }
+   }
+   @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .no{
+      display: none;
+    }
+    .yes{
+      display: block;
+    }
+    .container{
+      flex-direction: column;
+    }
+    .contain{
+      width: 80%;
+    }
+   }
+   .b{
+    color: darkblue; 
+    font-size: 20px;
+    padding-left: 2em;
+    font-family: sans-serif;
+
+   }
+  
+  
